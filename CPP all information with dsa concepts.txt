@@ -1,0 +1,506 @@
+#include <iostream> here this is the header line
+
+the purpose of this line is that it tells the compiler to include the input - output stream library
+
+iostream stands for input - output stream which enable usage of standard input(cin) and standard output (cout)
+
+without iostream the compiler doesnot understand cin and cout
+
+using namespace std;
+
+the purpose of this line to tell the compiler to use the standard (std) namespace
+
+namespace is a way to group identifiers(like function , object , variables ) to avoid name conflict
+
+cin - console input
+cout - console output
+
+endl means endline by line this the next output in another line otherwise it appears in the same line
+
+# cpp is a case sensitive
+
+variable naming rules means that rule by applying we can name the variables---
+Must begin with variable and underscore
+Case - Sensitive
+No special character or spaces
+
+
+  Datatypes               Sizes
+int                     4 bytes
+float                   4 bytes
+Double                  8 bytes
+char                    1 byte
+bool                    1 byte
+
+
+
+1. Arithmetic Operators
+Used to perform basic mathematical operations.
+
+Operator	Description	Example
++	        Addition	a + b
+-		Subtraction	a - b
+*		Multiplication	a * b
+/		Division	a / b
+%		Modulus 	a % b
+
+🔹 2. Relational (Comparison) Operators
+Used to compare two values.
+
+Operator	Description	Example
+==		Equal to	a == b
+!=		Not equal to	a != b
+>		Greater than	a > b
+<		Less than	a < b
+>=	Greater than or equal	a >= b
+<=	Less than or equal	a <= b
+
+🔹 3. Logical Operators
+Used to perform logical operations.
+
+Operator	Description	Example
+&&	Logical AND	(a > 0 && b > 0)
+`		`
+!	Logical NOT	!(a > 0)
+
+🔹 4. Assignment Operators
+Used to assign values to variables.
+
+Operator	Description	Example
+=		Assign		a = b
++=		Add and assign	a += b
+-=	Subtract and assign	a -= b
+*=	Multiply and assign	a *= b
+/=	Divide and assign	a /= b
+%=	Modulus and assign	a %= b
+
+🔹 5. Increment and Decrement Operators
+Operator	Description	Example
+++	Increment	++a or a++
+--	Decrement	--a or a--
+
+🔹 6. Bitwise Operators
+Used to perform bit-level operations.
+
+Operator	Description	Example
+&	Bitwise AND	a & b
+|	Bitwise OR	a | b
+^	Bitwise XOR	a ^ b
+~	Bitwise NOT	~a
+<<	Left shift	a << 1
+>>	Right shift	a >> 1
+
+🔹 7. Conditional (Ternary) Operator
+Short-hand for if-else.
+
+Syntax	Description
+condition ? expr1 : expr2	Returns expr1 if condition is true, else expr2
+
+🔹 8. Sizeof Operator
+Returns the size (in bytes) of a data type or variable.
+
+sizeof(int); // typically returns 4
+🔹 9. Pointer Operators
+Operator	Description	Example
+*	Pointer to a variable	*ptr
+&	Address of a variable	&a
+
+🔹 10. Type Casting Operator
+Used to convert data types.
+
+float x = (float)10 / 3;
+🔹 11. Scope Resolution Operator
+Used to access global variables or class members.
+
+::x  // Access global x
+🔹 12. Member Access Operators
+Operator	Description
+.	Access class/struct members (object)
+->	Access class/struct members (pointer)
+
+🔹 13. Other Operators
+Operator	Description
+,	Comma operator
+[]	Array subscript
+()	Function call
+new / delete	Dynamic memory allocation
+typeid	Runtime type information (RTTI)
+
+
+
+
+
+
+
+# Conditional Statement :- Conditional statements are used to perform different actions based on  different conditions
+
+ Common conditional statements:
+ ● if
+ ● if...else
+ ● else if
+ ● switch
+
+# As we until now we understand the if else if else if and else now we will discuss switch statement
+
+Function :- A function is a reusable block of code that performs a specific task. Once defined, it can be called by its name from anywhere in the program (as long as it is in scope), which helps avoid code repetition and improves modularity.
+
+Types Of Functions:-
+1) Library Functions :- Means those function those are provided by cpp library(eg. Pow() , sqrt())
+2)User Defined Function:- Those Function those are written or made by user
+
+Parameters are the variable declared in the function and the arguments are the real value that passed through function
+
+we can pass value in function by two types:-
+1) Pass by value
+2) Pass by refrence(Pointers are used)
+
+1
+Pass By Value :- 
+
+#include <iostream>
+using namespace std;
+
+void passByValue(int x) {
+    x = x + 10;
+    cout << "Inside function (pass by value): " << x << endl;
+}
+
+int main() {
+    int a = 5;
+    passByValue(a);
+    cout << "Outside function: " << a << endl;
+    return 0;
+}
+
+2
+Pass By Refrence :-
+
+#include <iostream>
+using namespace std;
+
+void passByReference(int &x) {
+    x = x + 10;
+    cout << "Inside function (pass by reference): " << x << endl;
+}
+
+int main() {
+    int a = 5;
+    passByReference(a);
+    cout << "Outside function: " << a << endl;
+    return 0;
+}
+
+
+# Recursion :- 
+Recursion is a process in which a function calls itself directly or indirectly to solve a problem. It keeps calling itself with smaller inputs until it reaches a base condition that stops the calls.
+
+
+Recursion requires a base case it is mendatory
+
+Object-Oriented Programming (OOP) is a programming method where code is organized using objects, which are instances of classes. Each object contains data (variables) and functions (methods) that operate on that data. OOP makes code easier to understand, reuse, and maintain by using key concepts like encapsulation, inheritance, polymorphism, and abstraction.
+
+
+Object :-  A variable of class type represents a specific entity with actual values 
+
+Memory is allocated only when object is created
+
+
+"A class is a blueprint from which objects are created."
+
+
+There are three types of Access Specifier 
+1) Public :- Accessible from outside
+2) Private :-  Accessible only within the class
+3) Protected :-  Accessible in derived classes
+
+
+Encapsulation:- Encapsulation in C++ is the concept of binding data (variables) and functions (methods) that work on that data into a single unit — called a class. It also means hiding the internal details of how things work, and only showing necessary parts to the outside world.
+
+ ● Class is a user-defined data type
+ ● Object is an instance of class
+ ● Use access specifiers wisely
+ ● Encapsulation = data hiding + controlled access
+
+private access specifier is the default access specifier in cpp for class elements
+
+🔹 Constructor
+A constructor is a special member function of a class that has:
+
+The same name as the class.
+
+No return type (not even void).
+
+Called automatically when an object of the class is created.
+
+🧠 Purpose:
+To initialize objects of the class.
+
+🔸 Types of Constructors:
+Default Constructor – Takes no arguments.
+
+Parameterized Constructor – Takes arguments to initialize values.
+
+Copy Constructor – Copies values from another object.
+
+🔹 Destructor
+A destructor is a special member function that:
+
+Has the same name as the class, but with a tilde (~) in front.
+
+No arguments, no return type.
+
+Called automatically when the object goes out of scope or is deleted.
+
+🧠 Purpose:
+To free up resources like memory, file handles, or network connections used by the object.
+
+Constructor: Initializes object automatically
+ Destructor: Cleans up automatically
+ Constructors can be overloaded, destructors can’t
+ Both are key to object lifecycle
+
+
+Destructors cannot be overloaded because:
+ ● A class can have only one destructor.
+ ● Destructors do not take arguments and do not return 
+anything.
+ ● Overloading requires different parameter lists, which 
+destructors don't support.
+ ● This is by design, to ensure automatic cleanup of 
+resources in a consistent way
+
+# this is a pointer that points to the current object of the class
+
+Applications of this Pointer
+ ● To resolve naming conflicts.
+ ● To return the current object.
+ ● To chain function calls.
+
+In C++, this is a special pointer available inside non-static member functions of a class.
+
+Syntax of chaining 
+class Demo {
+private:
+    int a, b;
+
+public:
+    Demo& setA(int x) {
+        a = x;
+        return *this;  // Return the current object
+    }
+
+    Demo& setB(int y) {
+        b = y;
+        return *this;  // Return the current object
+    }
+
+    void show() {
+        cout << "a = " << a << ", b = " << b << endl;
+    }
+};
+
+
+# Static Members:- 
+  Static Data Members:
+ ● Shared by all objects of the class.
+ ● Memory is allocated only once, at class level.
+ Static Member Functions:
+ ● Can be called without creating an object.
+ ● Can only access static data members
+
+
+we give the value of static data member outside the class i will give example below in which we have static data member and static functions
+
+class Student {
+public:
+    static int total;
+
+    Student() {
+        total++;
+    }
+
+    static void showTotal() {
+        cout << "Total students: " << total << endl;
+    }
+};
+
+int Student::total = 0;
+
+int main() {
+    Student s1, s2, s3;
+    Student::showTotal();  // Output: Total students: 3
+}
+
+ Feature             Static              Non-Static
+Belongs to           Class                Object
+Memory allocation    once for             Separate for each object
+                    entire class
+Access          ClassName::function()     Through object
+
+Inheritance is a feature in C++ that allows a class to acquire (inherit) properties and behaviors (i.e., data members and member functions) of another class.
+	Types of inheritance:-
+
+ ● Single Inheritance
+ ● Multiple Inheritance
+ ● Multilevel Inheritance
+ ● Hierarchical Inheritance
+ ● Hybrid Inheritance 
+
+
+Polymorphism means "many forms". 
+It allows us to perform a single action in different ways
+
+Compile-Time Polymorphism
+ ● Function Overloading
+ ● Operator Overloading
+ Run-Time Polymorphism
+ ● Function Overriding (with inheritance)
+
+
+Introduction to Function Overriding
+ Function overriding allows a derived class to provide a 
+specific implementation of a function that is already defined 
+in its base class.
+ It supports runtime polymorphism
+
+
+ 2. Lists (Doubly Linked List)
+ Syntax and Operations: push_front, push_back, pop_front
+ Example:
+ list<int> l;
+ l.push_back(1);
+ l.push_front(0);
+
+3. Stacks (LIFO)
+ Syntax: stack<int> s;
+ Operations: push, pop, top
+ Example:
+ stack<int> s;
+ s.push(1);
+ s.push(2);
+ cout << s.top(); // 2
+ Use Cases: Expression evaluation, recursion simulation.
+ 
+
+ 4. Queues (FIFO)
+ Syntax: queue<int> q;
+ Operations: push, pop, front
+ Example:
+ queue<int> q;
+ q.push(1);
+ q.push(2);
+ cout << q.front(); // 1
+ Use Cases: Task scheduling, buffer management.
+
+
+#Map:----------
+
+A map is a container that stores elements in key-value pairs.
+
+🧠 Key Features:
+Keys are unique
+
+Automatically sorted by keys
+
+Fast lookup, insertion, deletion
+
+Uses Red-Black Tree internally
+
+
+Syntax: map<string, int> mp;
+ Operations: Insertion, Access, Deletion
+ Example:
+ map<string, int> mp;
+ mp["Apple"] = 2;
+ mp["Banana"] = 3;
+ cout << mp["Apple"]; // 2
+ Use Cases: Frequency count, key-value storage
+
+
+# Set:------------
+
+A set is a container that stores unique elements in sorted order (ascending) by default.
+
+🧠 Key Features:
+No duplicate values
+
+Automatically sorted
+
+Uses Red-Black Tree internally
+
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    set<int> s;
+
+    s.insert(5);
+    s.insert(1);
+    s.insert(3);
+    s.insert(3);  // Duplicate, will be ignored
+
+    cout << "Set elements: ";
+    for (int x : s) {
+        cout << x << " ";
+    }
+
+    // Check existence
+    if (s.find(3) != s.end())
+        cout << "\n3 is found in the set";
+    else
+        cout << "\n3 is not found";
+
+    // Erase an element
+    s.erase(1);
+
+    cout << "\nAfter erasing 1: ";
+    for (int x : s) {
+        cout << x << " ";
+    }
+
+    return 0;
+}
+
+✅ What is a Pair?
+A pair is a simple container that holds two values (possibly of different types).
+
+#include <iostream>
+#include <utility>  // for pair
+using namespace std;
+
+int main() {
+    pair<int, string> p;
+    p.first = 1;
+    p.second = "Sachin";
+
+    cout << p.first << " " << p.second << endl;
+
+    // Shortcut to initialize
+    pair<int, string> q = make_pair(2, "Rahul");
+    cout << q.first << " " << q.second << endl;
+
+    return 0;
+}
+| Feature            | `pair`                                            | `map`                          |
+| ------------------ | ------------------------------------------------- | ------------------------------ |
+| Type               | Simple container                                  | Associative container (STL)    |
+| Stores             | Only **1 pair** of values                         | **Multiple key-value pairs**   |
+| Internal structure | Single object                                     | Stores many `pair<key, value>` |
+| Use case           | Return two values from a function, store relation | Organize data using keys       |
+| Indexed access     | `.first`, `.second`                               | Use `map[key]` or iterator     |
+| Example            | `pair<int, string>`                               | `map<int, string>`             |
+| STL Header         | `<utility>`                                       | `<map>`                        |
+
+
+
+Some operations that are useful for stdl library elements which are vector , map , set , pair etc
+vector<int> v;
+ sort(v.begin(), v.end());
+ find(v.begin(), v.end(), 3);
+ count(v.begin(), v.end(), 3)
+
+
+
+
+
